@@ -1,3 +1,11 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 #sidBarCss {
   min-height: 100vh;
 }

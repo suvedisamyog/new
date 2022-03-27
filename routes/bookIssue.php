@@ -18,8 +18,8 @@ include '../includes/sidNav.php';
 
 <?php
 
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($SERVER["REQUEST_METHOD"] == "POST") {
+   
     $registration = $_POST["reg"];
     $isbn = $_POST["isbn"];
     $bookName = $_POST["bookName"];
@@ -42,15 +42,16 @@ else{
     $error="**Unknown Error ! Please try again";
 }
           }
+          else{
+            $error="**Invalid registration Number";
+          
+        }
       }
-
+    }
 
     }
-    else{
-        $error="**Invalid registration Number";
-      
-    }
-}
+    
+
 
 
 

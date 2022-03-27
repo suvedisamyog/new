@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['mail'])){
- header('location:../index.php');
+ header('location:../adminLogin.php');
 }
  include '../connection.php';
  $name=$_SESSION['mail'];

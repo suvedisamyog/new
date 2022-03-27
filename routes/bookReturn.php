@@ -33,6 +33,7 @@ include '../includes/sidNav.php';
                 ?>
 
                         <table class="table table-bordered  table-hover black  " id="Book-table">
+                            <h1><?php echo $stdname ;?></h1>
                             <thead>
                                 <tr>
                                     <th>Books</th>
@@ -47,41 +48,26 @@ include '../includes/sidNav.php';
                             </thead>
                             <?php
                             while ($row = mysqli_fetch_assoc($data)) { ?>
+                            <?php $stdname=$_row['stdname'];?>
                                 <tbody>
                                     <tr>
                                     <td><?php echo $row['bookname']; ?></td>
                                     <td><?php echo $row['isbn']; ?></td>
                                     <td><?php echo $row['issue']; ?></td>
-                                    <!-- <td><?php echo $row['']; ?></td> -->
+                                   <td><a href="" title="Return Book"><i class="fa-solid fa-rotate-left  fa-2x mb-4" title="Return Book"></i></a></td>
                                     </tr>
                                 </tbody>
 
-                                <!-- <i class="fa-solid fa-rotate-left"></i> -->
 
 
                     <?php
                             }
                         }
                         else{ 
-                            echo`
-                            <div class="modal" tabindex="-1">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title">Modal title</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  <p>Modal body text goes here.</p>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-`;
+                            echo"
+                           No Records Found
+                          
+";
                         }
                     }
 

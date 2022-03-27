@@ -32,7 +32,7 @@ if (isset($_POST['register'])){
             }
                 $sql="INSERT INTO `admin`(`name`,`email`,`password`,`cpassword`,`image`) VALUES ('$name', '$email','$pass', '$cpass','$destinationfile')";
                 if(mysqli_query($conn, $sql)){
-                    header('location:../index.php');
+                    header('location:../adminLogin.php');
                     }
                     else{
                     header('location:./sinup.php?error=Registration failed');

@@ -60,7 +60,12 @@ include '../includes/sidNav.php';
                                         <a href="<?php echo $row['image']; ?>" target="_blank">
                                             <img src='<?php echo $row['image']; ?>' alt="Image Not available" width="300" height="300" style=" position: relative;
             border-radius: 10px;
-  box-shadow: 20px 20px rgba(0,0,0,.15);">
+    box-shadow: 1px 1px 0px #999,
+                2px 2px 0px #999,
+                3px 3px 0px #999,
+                4px 4px 0px #999,
+                5px 5px 0px #999,
+                6px 6px 0px #999;;">
                                         </a>
                                     </div>
                                 <?php

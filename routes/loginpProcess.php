@@ -24,14 +24,14 @@ if(isset($_POST["adminlogin"])){
        
      }
      else{ 
-        header('location:../index.php?error=incorrect password');
+        header('location:../adminLogin.php?error=incorrect password');
 exit();
       
      }
      
     }
     else {
-        header('location:../index.php?error=email id not registered');
+        header('location:../adminLogin.php?error=email id not registered');
              
                 exit();
             }
